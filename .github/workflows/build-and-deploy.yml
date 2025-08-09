@@ -1,0 +1,15 @@
+name: build-and-deploy
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        shell: pwsh
+        run: "& "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe" .\src\CreateCube\CreateCube.csproj /p:Configuration=Release /t:Rebuild"
+      - name: Deploy
+        shell: pwsh
+        run: .\scripts\deploy.ps1 -RevitVersion 2024

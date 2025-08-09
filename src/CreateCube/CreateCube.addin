@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Name>CreateCube</Name>
+    <Assembly>__ASSEMBLY__</Assembly>
+    <AddInId>{F20C2E5E-2B3C-4B0E-8B8F-111111111111}</AddInId>
+    <FullClassName>CreateCube.Command</FullClassName>
+    <VendorId>VPO</VendorId>
+    <VendorDescription>Revit plugin examples</VendorDescription>
+  </AddIn>
+</RevitAddIns>
