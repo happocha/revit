@@ -1,4 +1,4 @@
-param([string]$RevitVersion="2024",[string]$ProjectName="CreateCube")
+param([string]$RevitVersion="2026",[string]$ProjectName="CreateCube")
 $ErrorActionPreference="Stop"
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path | Split-Path -Parent
 $projDir = Join-Path $root "src\$ProjectName"

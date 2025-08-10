@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <LangVersion>latest</LangVersion>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <AssemblyName>CreateCube</AssemblyName>
     <RootNamespace>CreateCube</RootNamespace>
     <Platforms>x64</Platforms>
   </PropertyGroup>
   <PropertyGroup>
-    <RevitVersion>2024</RevitVersion>
-    <RevitInstallRoot Condition=" == ">C:\Program Files\Autodesk\Revit $(RevitVersion)\</RevitInstallRoot>
+    <RevitVersion>2026</RevitVersion>
+    <RevitInstallRoot Condition="'$(RevitInstallRoot)' == ''">C:\Program Files\Autodesk\Revit $(RevitVersion)\</RevitInstallRoot>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="RevitAPI">
