@@ -11,13 +11,16 @@
     <RevitVersion>2026</RevitVersion>
     <RevitInstallRoot Condition="'$(RevitInstallRoot)' == ''">C:\Program Files\Autodesk\Revit $(RevitVersion)\</RevitInstallRoot>
   </PropertyGroup>
+  <PropertyGroup>
+    <RevitApiDir Condition="'$(REVIT2026_API_DIR)' != ''">$(REVIT2026_API_DIR)\</RevitApiDir>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="RevitAPI">
-      <HintPath>$(RevitInstallRoot)RevitAPI.dll</HintPath>
+      <HintPath>$(RevitApiDir)RevitAPI.dll;$(RevitInstallRoot)RevitAPI.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="RevitAPIUI">
-      <HintPath>$(RevitInstallRoot)RevitAPIUI.dll</HintPath>
+      <HintPath>$(RevitApiDir)RevitAPIUI.dll;$(RevitInstallRoot)RevitAPIUI.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="System" />
